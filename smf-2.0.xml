@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<!DOCTYPE modification SYSTEM "http://www.simplemachines.org/xml/modification">
+<modification xmlns="http://www.simplemachines.org/xml/modification" xmlns:smf="http://www.simplemachines.org/">
+	<name>[BBCode] Quiet Shout</name>
+	<id>LiamHammett:QuietShout</id>
+	<version>1.0</version>
+	<homepage>https://liamhammett.com/</homepage>
+	<file name="$sourcedir/Subs.php">
+		<operation>
+			<search position="after"><![CDATA[	array(
+				'tag' => 's',
+				'before' => '<del>',
+				'after' => '</del>',
+			),]]></search>
+			<add><![CDATA[
+         array(
+            'tag' => 'quiet',
+            'before' => '<span style="text-transform: lowercase;">',
+            'after' => '</span>',
+         ),
+         array(
+            'tag' => 'shout',
+            'before' => '<span style="text-transform: uppercase;">',
+            'after' => '</span>',
+         ),
+]]></add>
+		</operation>
+</file>
+</modification>
